@@ -1,0 +1,25 @@
+[project]
+name = "turtleos"
+version = "0.1.0"
+description = "TurtleOS - fake operating system simulator in Python"
+authors = [{ name = "bangkkuser" }]
+readme = "README.md"
+requires-python = ">=3.10"
+
+dependencies = [
+  "pytest",
+  "rich"
+]
+
+[project.scripts]
+turtleos = "turtleos.main:main"
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
